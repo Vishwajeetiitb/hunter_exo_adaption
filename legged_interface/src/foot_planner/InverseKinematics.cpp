@@ -44,8 +44,12 @@ vector5_t InverseKinematics::computeTranslationIK(vector_t init_q, int leg, vect
 
   const auto& des_foot_p = des_foot_linear_xyz;
   const auto& model = pinocchio_interface_->getModel();
+  // std::cout << "Model is:" << model << std::endl;
   auto& data = pinocchio_interface_->getData();
+  // std::cout << "Data is:" << pinocchio_interface_<< std::endl;
+  // std::cout << "Translation is:" << data.oMf[10].translation()<< std::endl;
   auto FRAME_ID = info_->endEffectorFrameIndices[leg];
+  // std::cout << "Frame ID is:" << FRAME_ID<< std::endl;
   int index = leg2index(leg);
 
   vector5_t leg_q_min = model.lowerPositionLimit.segment<5>(6 + index);

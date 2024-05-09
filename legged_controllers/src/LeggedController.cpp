@@ -217,6 +217,7 @@ void LeggedController::update(const ros::Time& time, const ros::Duration& period
       {
         hybridJointHandles_[j].setCommand(mpc_planned_joint_pos[j], mpc_planned_joint_vel[j], kp_position, kd_position,
                                           0);
+        // std::cout << "Without controller states"<< mpc_planned_joint_pos << std::endl;
       }
     }
     else
@@ -228,6 +229,7 @@ void LeggedController::update(const ros::Time& time, const ros::Duration& period
         hybridJointHandles_[j].setCommand(posDes_[j], velDes_[j],
                                           cmdContactFlag[int(j / 5)] ? kp_small_stance : kp_small_swing, kd_small,
                                           wbc_planned_torque(j));
+        // std::cout << "With controller states"<< posDes_ << std::endl;
       }
       else if (j == 4 || j == 9)
       {

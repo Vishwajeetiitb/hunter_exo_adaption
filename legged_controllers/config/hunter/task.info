@@ -22,13 +22,13 @@ swing_trajectory_config
 {
   liftOffVelocity               0.05
   touchDownVelocity             0.0
-  swingHeight                   0.04
+  swingHeight                   0.08
   swingTimeScale                0.15
 
   feet_bias_x1                  0.034
   feet_bias_x2                 -0.056
   feet_bias_y                   0.11
-  feet_bias_z                  -0.63
+  feet_bias_z                  -0.678
   
   next_stance_position_z        0.02
 }
@@ -164,7 +164,7 @@ initialState
    ;; Base Pose: [position, orientation] ;;
    (6,0)  0.0     ; p_base_x
    (7,0)  0.0     ; p_base_y
-   (8,0)  0.63    ; p_base_z
+   (8,0)  0.82    ; p_base_z
    (9,0)  0.0     ; theta_base_z
    (10,0) 0.0     ; theta_base_y
    (11,0) 0.0     ; theta_base_x

@@ -216,7 +216,7 @@ void InitRobotState(mjData* d)
   // init qpos
   d->qpos[0] = 0;
   d->qpos[1] = 0;
-  d->qpos[2] = 0.63;
+  d->qpos[2] = 0.3;
 
   d->qpos[3] = 1;
   d->qpos[4] = 0;

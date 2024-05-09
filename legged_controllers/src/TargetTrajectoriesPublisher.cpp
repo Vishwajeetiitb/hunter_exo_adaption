@@ -67,6 +67,7 @@ TargetTrajectories bodyRotationToTargetTrajectories(const vector_t& targetPose, 
   // desired state trajectory
   vector_t currentPose = observation.state.segment<6>(6);
   scalar_t dz = COM_HEIGHT - currentPose(2);
+  std::cout << "Com height: "<< COM_HEIGHT << " Dz: " << dz <<std::endl;
   dz = dz > 0 ? fmin(dz, changeLimit_[2]) : fmax(dz, -changeLimit_[2]);
   currentPose(2) = currentPose(2) + dz;
   currentPose(3) = targetPose(3);
