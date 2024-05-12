@@ -339,7 +339,7 @@ void SwingTrajectoryPlanner::genSwingTrajs(int feet, scalar_t current_time, scal
   scalar_t z_l1 = 0.749;
   scalar_t z_k1 = 1.338;
 
-  scalar_t z_a2 = 0.630;
+  scalar_t z_a2 =0.1;
   scalar_t z_l2 = 0.570;
   scalar_t z_k2 = 1.633;
 

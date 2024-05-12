@@ -114,7 +114,7 @@ typedef enum mjtGeom_ {           // type of geometric shape
   mjGEOM_LABEL,                   // text label
   mjGEOM_TRIANGLE,                // triangle connecting a frame
 
-  mjGEOM_NONE         = 1001      // missing geom type
+  mjGEOM_NONE         = 1500      // missing geom type
 } mjtGeom;
 
 

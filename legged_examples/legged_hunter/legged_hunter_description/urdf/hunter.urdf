@@ -86,7 +86,7 @@
 
   <!-- ************* part 1 *************** -->
   <joint name="leg_l1_joint" type="revolute">
-    <origin xyz="-0.002 0.09 -0.1035" rpy="0 0 0" />
+    <origin xyz="-0.002 0.175 -0.1035" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="leg_l1_link" />
     <axis xyz="1 0 0" />
@@ -182,7 +182,7 @@
 
   <!-- ************* part 4 *************** -->
   <joint name="leg_l4_joint" type="revolute">
-    <origin xyz="0 0.0145 -0.344" rpy="0 0 0" />
+    <origin xyz="0 0.0145 -0.468" rpy="0 0 0" />
     <parent link="leg_l3_link" />
     <child link="leg_l4_link" />
     <axis xyz="0 1 0" />
@@ -220,7 +220,7 @@
 
   <!-- ************* part 5 *************** -->
   <joint name="leg_l5_joint" type="revolute">
-    <origin xyz="0.005 0 -0.344" rpy="0 0 0" />
+    <origin xyz="0.005 0 -0.468" rpy="0 0 0" />
     <parent link="leg_l4_link" />
     <child link="leg_l5_link" />
     <axis xyz="0 -1 0" />
@@ -245,13 +245,13 @@
     <collision>
       <origin xyz="0.01503 0 -0.0102" rpy="1.57 0 0" />
       <geometry>
-        <box size="0.1501 0.0345 0.0175" />
+        <box size="0.2301 0.0345 0.0175" />
       </geometry>
     </collision>
   </link>
 
   <joint name="leg_l5_fixed_1" type="fixed">
-    <origin xyz="0.06 0 -0.007" rpy="0 0 0" />
+    <origin xyz="0.12 0 -0.007" rpy="0 0 0" />
     <parent link="leg_l5_link" />
     <child link="leg_l_f1_link" />
   </joint>
@@ -275,7 +275,7 @@
   </link>
 
   <joint name="leg_l5_fixed_2" type="fixed">
-    <origin xyz="-0.030 0 -0.007" rpy="0 0 0" />
+    <origin xyz="-0.090 0 -0.007" rpy="0 0 0" />
     <parent link="leg_l5_link" />
     <child link="leg_l_f2_link" />
   </joint>
@@ -414,7 +414,7 @@
 
   <!-- ************* part 1 *************** -->
   <joint name="leg_r1_joint" type="revolute">
-    <origin xyz="-0.002 -0.09 -0.1035" rpy="0 0 0" />
+    <origin xyz="-0.002 -0.175 -0.1035" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="leg_r1_link" />
     <axis xyz="1 0 0" />
@@ -510,7 +510,7 @@
 
   <!-- ************* part 4 *************** -->
   <joint name="leg_r4_joint" type="revolute">
-    <origin xyz="0 -0.0145 -0.344" rpy="0 0 0" />
+    <origin xyz="0 -0.0145 -0.468" rpy="0 0 0" />
     <parent link="leg_r3_link" />
     <child link="leg_r4_link" />
    <axis xyz="0 1 0" />
@@ -548,7 +548,7 @@
 
   <!-- ************* part 5 *************** -->
   <joint name="leg_r5_joint" type="revolute">
-    <origin xyz="0.005 0 -0.344" rpy="0 0 0" />
+    <origin xyz="0.005 0 -0.468" rpy="0 0 0" />
     <parent link="leg_r4_link" />
     <child link="leg_r5_link" />
     <axis xyz="0 1 0" />
@@ -573,13 +573,13 @@
     <collision>
       <origin xyz="0.01503 0 -0.0102" rpy="1.57 0 0" />
       <geometry>
-        <box size="0.1501 0.0345 0.0175" />
+        <box size="0.2301 0.0345 0.0175" />
         </geometry>
     </collision>
   </link>
 
   <joint name="leg_r5_fixed_1" type="fixed">
-    <origin xyz="0.06 0 -0.007" rpy="0 0 0" />
+    <origin xyz="0.12 0 -0.007" rpy="0 0 0" />
     <parent link="leg_r5_link" />
     <child link="leg_r_f1_link" />
   </joint>
@@ -603,7 +603,7 @@
   </link>
 
   <joint name="leg_r5_fixed_2" type="fixed">
-    <origin xyz="-0.030 0 -0.007" rpy="0 0 0" />
+    <origin xyz="-0.090 0 -0.007" rpy="0 0 0" />
     <parent link="leg_r5_link" />
     <child link="leg_r_f2_link" />
   </joint>

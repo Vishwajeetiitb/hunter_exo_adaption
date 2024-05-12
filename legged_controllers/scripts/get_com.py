@@ -47,8 +47,16 @@ class CoMAndInertiaCalculator:
                 ori = PyKDL.Rotation.Quaternion(pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
                 frame = PyKDL.Frame(ori, pos)
                 com_pos = frame * PyKDL.Vector(*link.inertial.origin.xyz)
+                # base_pose = []
+                # foot_pose = []
                 if link_name == "base_link":
+                    base_pose = com_pos
                     print("base link pose",com_pos)
+                
+                if link_name == "leg_r5_link":
+                    foot_pose = com_pos
+                    print("foot link pose",com_pos)
+                # print("difference", base_pose-foot_pose)
                 
                 weighted_pos_sum += link.inertial.mass * com_pos
                 total_mass += link.inertial.mass
