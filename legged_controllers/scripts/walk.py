@@ -21,7 +21,7 @@ class KeyboardController:
                 elif key.char == 's':
                     self.twist_msg.linear.x = -0.35
                 else:
-                    self.twist_msg.linear.x = 0.35
+                    self.twist_msg.linear.x = 0.0
 
                 if key.char == 'a':
                     self.twist_msg.angular.z = 0.35
@@ -33,7 +33,7 @@ class KeyboardController:
             pass
 
     def on_release(self, key):
-        self.twist_msg.linear.x = 0.35
+        self.twist_msg.linear.x = 0.0
         self.twist_msg.angular.z = 0.0
 
 def ros_publish():
